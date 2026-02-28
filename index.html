@@ -7,24 +7,40 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+<header class="header">
+  <a href="#" class="logo">Portfolio.</a>
 
-        <nav class="navbar">
-            <a href="#" style="--i:1;"
-            class="active">Home</a>
-            <a href="#" style="--i:2">About</a>
-            <a href="#" style="--i:3">Skills</a>
-            <a href="#" style="--i:4">Portfolio</a>
-            <a href="#" style="--i:5">Contact</a>
-        </nav>
+  <!-- Hamburger Menu Icon -->
+  <i class='bx bx-menu' id="menu-icon"></i>
 
-    </header>
-     <!-- ----- home section ------ -->
+  <nav class="navbar">
+      <a href="#" style="--i:1;" class="active">Home</a>
+      <a href="#" style="--i:2">About</a>
+      <a href="#" style="--i:3">Skills</a>
+      <a href="#" style="--i:4">Portfolio</a>
+      <a href="#" style="--i:5">Contact</a>
+  </nav>
+</header>
+     
+   
+<!-- HEADER / NAVBAR -->
+<header class="header">
+  <a href="#" class="logo">Portfolio.</a>
+  <nav class="navbar">
+    <a href="#home" style="--i:1" class="active">Home</a>
+    <a href="#about" style="--i:2">About</a>
+    <a href="#skills" style="--i:3">Skills</a>
+    <a href="#portfolio" style="--i:4">Portfolio</a>
+    <a href="#contact" style="--i:5">Contact</a>
+  </nav>
+</header>
+
+<!-- ----- home section ------ -->
     <section class="home">
         <div class="home-sci">
             <a href=""><i class='bx bxl-github' ></i></a>
@@ -51,170 +67,270 @@
         </div>
     </section>
 
-   <!-- About Section -->
+<!-- About Section -->
 <section class="about" id="about">
-    <div class="about-container">
+  <div class="about-container">
 
-        <div class="about-img">
-            <div class="circle">
-                <img src="About.png" alt="">
+    <!-- Image Side -->
+    <div class="about-img">
+      <div class="circle">
+        <img src="About.jpg" alt="Rezaul Karim">
+      </div>
+    </div>
+
+    <!-- Content Side -->
+    <div class="about-content">
+      <h2>About <span>Me</span></h2>
+      <p>
+         Hi! I'm a passionate Frontend Developer specializing in building 
+         modern, responsive, and user-friendly websites. I enjoy turning 
+         creative ideas into interactive digital experiences using HTML, CSS, 
+         and JavaScript. Constantly exploring new technologies, I strive to 
+         enhance my skills and deliver websites that are not only visually 
+        appealing but also efficient and accessible for everyone.
+      </p>
+
+      <!-- Educational Qualification with Icons -->
+      <div class="education">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <span class="edu-icon">🎓</span>
+            <div class="edu-info">
+              <strong>B.Sc in Computer Science & Engineering (CSE)</strong><br>
+              Uttara University (2025-Ongoing)
             </div>
-        </div>
+          </li>
+          <li>
+            <span class="edu-icon">🏫</span>
+            <div class="edu-info">
+              <strong>Diploma in Computer Science and Technology (CST) </strong><br>
+              Kurigram Polytechnic Institute (2020-2025)
+            </div>
+          </li>
+          <li>
+            <span class="edu-icon">📜</span>
+            <div class="edu-info">
+              <strong>Secondary School Certificate (SSC)</strong><br>
+              Naldanga WC high school (2019-2020)
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <div class="about-content">
-            <h2>About <span>Me</span></h2>
-            <p>
-                I am a passionate Frontend Developer with experience in creating 
-                responsive and modern websites. I love working with HTML, CSS, 
-                JavaScript and continuously learning new technologies to improve my skills.
-            </p>
-            <button class="about-btn">Download CV</button>
-        </div>
+      <!-- Download CV Button at the End -->
+      <a href="YourCV.pdf" download class="about-btn">Download CV</a>
 
     </div>
-</section>      
-  
+
+  </div>
+</section>
 <!-- Skills Section -->
 <section class="skills" id="skills">
-    <div class="skills-container">
-        <h2 class="section-title">My <span>Skills</span></h2>
+  <h2 class="heading">My <span>Skills</span></h2>
+  <p class="skills-subtitle">Technologies I work with</p>
 
-        <div class="skills-box">
+  <div class="skills-container">
 
-            <div class="skill-card">
-                <h3>HTML</h3>
-                <p>Semantic & Responsive Structure Design</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>CSS</h3>
-                <p>Modern UI, Animation & Flexbox/Grid</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>Interactive & Dynamic Web Features</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Bootstrap</h3>
-                <p>Fast & Responsive Framework Design</p>
-            </div>
-
-        </div>
+    <!-- HTML -->
+    <div class="skill-card">
+      <i class='bx bxl-html5 skill-icon'></i>
+      <h3>HTML</h3>
+      <p>Semantic & Responsive Structure Design</p>
+      <div class="progress-bar"><span style="width:90%"></span></div>
     </div>
+
+    <!-- CSS -->
+    <div class="skill-card">
+      <i class='bx bxl-css3 skill-icon'></i>
+      <h3>CSS</h3>
+      <p>Modern UI, Animation & Flexbox/Grid</p>
+      <div class="progress-bar"><span style="width:85%"></span></div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill-card">
+      <i class='bx bxl-javascript skill-icon'></i>
+      <h3>JavaScript</h3>
+      <p>Interactive & Dynamic Web Features</p>
+      <div class="progress-bar"><span style="width:70%"></span></div>
+    </div>
+
+    <!-- Bootstrap -->
+    <div class="skill-card">
+      <i class='bx bxl-bootstrap skill-icon'></i>
+      <h3>Bootstrap</h3>
+      <p>Fast & Responsive Framework Design</p>
+      <div class="progress-bar"><span style="width:80%"></span></div>
+    </div>
+
+    <!-- Responsive Design -->
+    <div class="skill-card">
+      <i class='bx bx-devices skill-icon'></i>
+      <h3>Responsive Design</h3>
+      <p>Mobile First & Cross Device Compatibility</p>
+      <div class="progress-bar"><span style="width:85%"></span></div>
+    </div>
+
+    <!-- Flexbox & Grid -->
+    <div class="skill-card">
+      <i class='bx bx-layout skill-icon'></i>
+      <h3>Flexbox & Grid</h3>
+      <p>Advanced Layout Techniques</p>
+      <div class="progress-bar"><span style="width:80%"></span></div>
+    </div>
+
+    <!-- Git & GitHub -->
+    <div class="skill-card">
+      <i class='bx bxl-github skill-icon'></i>
+      <h3>Git & GitHub</h3>
+      <p>Version Control & Team Collaboration</p>
+      <div class="progress-bar"><span style="width:75%"></span></div>
+    </div>
+
+    <!-- DOM Manipulation -->
+    <div class="skill-card">
+      <i class='bx bx-code-alt skill-icon'></i>
+      <h3>DOM Manipulation</h3>
+      <p>Dynamic Content & Event Handling</p>
+      <div class="progress-bar"><span style="width:70%"></span></div>
+    </div>
+
+    <!-- React -->
+    <div class="skill-card">
+      <i class='bx bxl-react skill-icon'></i>
+      <h3>React (Basic)</h3>
+      <p>Component Based UI Development</p>
+      <div class="progress-bar"><span style="width:60%"></span></div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Portfolio Section -->
+   <!-- portfolio -->
+
 <section class="portfolio" id="portfolio">
-    <div class="portfolio-container">
-        <h2 class="section-title">My <span>Portfolio</span></h2>
+  <div class="portfolio-container">
+    <h2 class="section-title">My <span>Portfolio</span></h2>
 
-        <div class="portfolio-box">
+    <div class="portfolio-box">
 
-            <div class="portfolio-card">
-                <img src="portfolio-1.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 1</h4>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <img src="portfolio-2 (1).jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 2</h4>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <img src="portfolio-3.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 3</h4>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <img src="portfolio-4.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 4</h4>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <img src="portfolio-5.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 5</h4>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <img src="portfolio-6.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Project 6</h4>
-                </div>
-            </div>
-
+      <div class="portfolio-card">
+        <img src="portfolio-1.jpg" alt="Project 1">
+        <div class="portfolio-layer">
+          <h4 class="portfolio-title">Project 1</h4>
+          <div class="portfolio-btns">
+            <a href="#" target="_blank">Live</a>
+            <a href="#" target="_blank">Code</a>
+          </div>
         </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="portfolio-2 (1).jpg" alt="Project 2">
+        <div class="portfolio-layer">
+          <h4 class="portfolio-title">Project 2</h4>
+          <div class="portfolio-btns">
+            <a href="#" target="_blank">Live</a>
+            <a href="#" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="portfolio-3.jpg" alt="Project 3">
+        <div class="portfolio-layer">
+          <h4 class="portfolio-title">Project 3</h4>
+          <div class="portfolio-btns">
+            <a href="#" target="_blank">Live</a>
+            <a href="#" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="portfolio-4.jpg" alt="Project 4">
+        <div class="portfolio-layer">
+          <h4 class="portfolio-title">Project 4</h4>
+          <div class="portfolio-btns">
+            <a href="#" target="_blank">Live</a>
+            <a href="#" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
-   <!-- Contact Section -->
+
+ <!-- contact section -->
+
 <section class="contact" id="contact">
-    <div class="contact-container">
-        <h2 class="section-title">Contact <span>Me</span></h2>
+  <div class="contact-container">
+    <h2 class="section-title">Contact <span>Me</span></h2>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-            </div>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+      </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="Subject">
-            </div>
+      <div class="input-box">
+        <input type="text" placeholder="Subject">
+      </div>
 
-            <textarea placeholder="Your Message" rows="6"></textarea>
+      <textarea placeholder="Your Message" rows="6"></textarea>
 
-            <button type="submit" class="contact-btn">Send Message</button>
-        </form>
-    </div>
-</section>  
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
 <!-- Footer Section -->
 <footer class="footer">
-    <div class="footer-container">
+  <div class="footer-container">
 
-        <div class="footer-logo">
-            <h2>Rezaul <span>Karim</span></h2>
-            <p>Frontend Developer | Creative Designer</p>
-        </div>
-
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-social">
-            <h3>Follow Me</h3>
-            <div class="social-icons">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-github"></i></a>
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-            </div>
-        </div>
-
+    <div class="footer-logo">
+      <h2>Rezaul <span>Karim</span></h2>
+      <p>Frontend Developer | Creative Designer</p>
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2026 Rezaul Karim | All Rights Reserved</p>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
+
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Rezaul Karim | All Rights Reserved</p>
+  </div>
 </footer>
+<script src="script.js"></script>
+<script>
+  const menuIcon = document.querySelector('#menu-icon');
+  const navbar = document.querySelector('.navbar');
 
+  menuIcon.onclick = () => {
+    navbar.classList.toggle('active');
+  };
+</script>
 </body>
 </html>
 
