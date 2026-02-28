@@ -1,13 +1,29 @@
 @import url(https://fonts.googleapis.com/css2?
   family=Poppins:wght@300;400;500;600;700;800;900&
   display=swap);
-  
-/* ===== Global ===== */
+ /* ===== Global ===== */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #0f0f1b;
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
@@ -32,28 +48,20 @@ body{
 
 /* ===== LOGO ===== */
 .logo{
-  font-size: 32px; 
+  font-size: 32px;
   font-weight: 800;
-  color: #fff;
   text-decoration: none;
-  position: relative;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  background: linear-gradient(45deg, #00f7ff, #ff00c8, #00ff99, #00ccff);
+  background: linear-gradient(45deg,#00f7ff,#ff00c8,#00ff99,#00ccff);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientLogo 6s ease infinite;
 }
 
-.logo:hover{
-  transform: scale(1.1);
-}
-
 @keyframes gradientLogo{
-  0%{ background-position: 0% 50%; }
-  50%{ background-position: 100% 50%; }
-  100%{ background-position: 0% 50%; }
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 /* ===== NAVBAR ===== */
@@ -62,13 +70,12 @@ body{
   gap: 30px;
 }
 
-.navbar a {
-  font-size: 26px; 
-  font-weight: 500;
-  text-decoration: none;
+.navbar a{
+  font-size: 22px;
   color: #fff;
+  text-decoration: none;
   position: relative;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .navbar a:hover,
@@ -78,16 +85,15 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
-/* Gradient underline */
 .navbar a::after{
   content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
-  width: 0%;
+  width: 0;
   height: 2px;
   background: linear-gradient(45deg,#00f7ff,#ff00c8);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .navbar a:hover::after,
@@ -99,12 +105,18 @@ body{
 #menu-icon{
   display: none;
   font-size: 28px;
-  color: #fff;
   cursor: pointer;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px){
+/* ===== SECTIONS ===== */
+section{
+  min-height: 100vh;
+  padding: 120px 10% 40px; /* header cover fix */
+  border-bottom: 1px solid #222;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px){
 
   #menu-icon{
     display: block;
@@ -121,7 +133,6 @@ body{
     padding: 15px 0;
     border-radius: 10px;
     display: none;
-    transition: 0.3s ease;
   }
 
   .navbar.active{
@@ -130,70 +141,10 @@ body{
   }
 
   .navbar a{
-    display: block;
     margin: 12px 0;
-    font-size: 28px; 
-  }
-}
-
-/* Tablet adjustment */
-@media (max-width: 992px){
-  .header{
-    padding: 16px 5%;
-  }
-  .navbar a{
     font-size: 24px;
   }
 }
-
-/* ===== GENERAL ===== */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body{
-  background: #0f0f1b;
-  color: #fff;
-}
-
-/* ===== HEADER ===== */
-.header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 10%;
-  background: #0c1124;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.logo{
-  font-size: 25px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar a{
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 20px;
-  transition: 0.3s;
-}
-.navbar a:hover{
-  background: linear-gradient(45deg,#f06,#3cf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* ===== HOME SECTION ===== */
 .home {
     width: 100%;
@@ -224,6 +175,7 @@ body{
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
+
 .home-content p {
     font-size: 16px;
     margin: 20px 0 40px;
@@ -480,6 +432,113 @@ body{
         transform: rotate(360deg);
     }
     
+}
+/* ================= RESPONSIVE ================= */
+
+
+@media (max-width: 1200px) {
+    .home {
+        padding: 70px 5% 0;
+    }
+}
+
+/* Tablet Device */
+@media (max-width: 991px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 80px 5% 50px;
+    }
+
+    .home-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .home-sci {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+      .home-sci a {
+        margin: 0;
+        animation: none; 
+    }
+  
+
+    .home-img {
+        margin-top: 40px;
+        width: 350px;
+        height: 350px;
+        animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    }
+
+    .home-img .glowing-circle::after {
+        width: 320px;
+        height: 320px;
+    }
+
+    .glowing-circle .image {
+        width: 320px;
+        height: 320px;
+    }
+
+    .image img {
+        max-width: 300px;
+        left: 50%;
+    }
+}
+
+/* Mobile Device */
+@media (max-width: 600px) {
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 160px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .home-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .home-img .glowing-circle::after {
+        width: 250px;
+        height: 250px;
+    }
+
+    .glowing-circle .image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image img {
+        max-width: 220px;
+    }
+    .home-sci {
+         justify-content: center; 
+         gap: 10px; 
+         margin: 15px 0; }
+    .home-sci a  { 
+        margin: 0; 
+        animation: none; }
 }
 
 /* About Section */
