@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
   <!-- header section -->
@@ -17,7 +18,7 @@
   <i class='bx bx-menu' id="menu-icon"></i>
 
   <nav class="navbar">
-    <a href="#home" class="active">Home</a>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
@@ -38,7 +39,7 @@
         
         <div class="home-content">
             <h1>Hi, I'm Rezaul Karim</h1>
-             <h3 class="animated-title">Frontend Developer</h3>
+            <h3> <span class="profession"></span></h3>
             <p>I am a skilled Frontend Developer, creating modern, responsive, and user-friendly websites using the latest web technologies, and I continually improve myself by learning new technologies every day.</p>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdrezailkarim4119@gmail.com&su=Job%20Opportunity&body=Hello%20Rezaul," target="_blank" class="btn">Hire Me</a>
         </div>
@@ -318,6 +319,44 @@
   menuIcon.onclick = () => {
     navbar.classList.toggle('active');
   };
+</script>
+<script>
+var typed = new Typed(".profession", {
+    strings: ["Frontend Developer", "Web Designer", "Freelancer"],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const menuIcon = document.querySelector('#menu-icon');
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  // mobile menu toggle
+  menuIcon.onclick = () => {
+    navbar.classList.toggle('active');
+  };
+
+  // active link change
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+
+      // remove active from all
+      navLinks.forEach(nav => nav.classList.remove('active'));
+
+      // add active to clicked
+      this.classList.add('active');
+
+      // mobile menu close after click
+      navbar.classList.remove('active');
+    });
+  });
+
+});
 </script>
 
 </body>
