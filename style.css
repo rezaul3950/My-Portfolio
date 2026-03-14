@@ -2,19 +2,7 @@
   family=Poppins:wght@300;400;500;600;700;800;900&
   display=swap);
  /* ===== Global ===== */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 
-body{
-  background: #0f0f1b;
-  color: #fff;
-}
-
-/* ===== HEADER ===== */
 *{
   margin: 0;
   padding: 0;
@@ -955,12 +943,6 @@ section{
     box-shadow: 0 0 15px #00f7ff66, 0 0 15px #ff00c877;
 }
 
-/* Gradient Animation */
-@keyframes gradientText {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -1184,12 +1166,6 @@ textarea:focus {
     font-size: 13px;
 }
 
-/* Gradient animation keyframes */
-@keyframes gradientText {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -1205,15 +1181,6 @@ textarea:focus {
     .footer-bottom { font-size: 12px; }
 }
 /* ==================== MAIN SECTIONS ==================== */
-
-/* General body / text */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #0f0f1b; /* default dark mode background */
-  color: #fff;
-}
 
 /* Header */
 .header {
@@ -1471,4 +1438,37 @@ body.light-mode *,
 body.light-mode *::before,
 body.light-mode *::after {
   transition: all 0.4s ease;
+}
+
+
+/* ===== LIGHT MODE FIX ===== */
+
+/* Social icon background */
+body.light-mode .home-sci a::after{
+  background:#ffffff;
+}
+
+/* Profile circle inside background */
+body.light-mode .home-img .glowing-circle::after{
+  background:#ffffff;
+}
+
+/* About image circle */
+body.light-mode .circle{
+  background:#ffffff;
+}
+
+/* Education card */
+body.light-mode .education ul li{
+  background:#f5f5f5;
+  color:#111;
+}
+
+body.light-mode .home-sci a{
+  background:#ffffff;
+  border:2px solid #0077ff;
+}
+
+body.light-mode .home-sci a i{
+  color:#0077ff;
 }
