@@ -13,6 +13,7 @@
   <!-- header section -->
 <header class="header">
   <a href="#" class="logo">Portfolio.</a>
+  <i class='bx bx-moon' id="darkMode-icon"></i>
 
   <!-- Hamburger -->
   <i class='bx bx-menu' id="menu-icon"></i>
@@ -258,19 +259,22 @@
   <div class="contact-container">
     <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <form action="#">
+    <form id="contact-form">
       <div class="input-box">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="from_email" placeholder="Your Email" required>
       </div>
 
       <div class="input-box">
-        <input type="text" placeholder="Subject">
+        <input type="text" name="subject" placeholder="Subject" required>
       </div>
 
-      <textarea placeholder="Your Message" rows="6"></textarea>
+      <div class="input-box">
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      </div>
 
       <button type="submit" class="contact-btn">Send Message</button>
+      <p id="form-message"></p>
     </form>
   </div>
 </section>
@@ -313,14 +317,6 @@
 </footer>
 <script src="script.js"></script>
 <script>
-  let menuIcon = document.querySelector('#menu-icon');
-  let navbar = document.querySelector('.navbar');
-
-  menuIcon.onclick = () => {
-    navbar.classList.toggle('active');
-  };
-</script>
-<script>
 var typed = new Typed(".profession", {
     strings: ["Frontend Developer", "Web Designer", "Freelancer"],
     typeSpeed: 80,
@@ -356,6 +352,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+});
+</script>
+<!-- Include EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("mailto:mdrezailkarim4119@gmail.com"); 
+})();
+
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
+contactForm.addEventListener('submit', function(e){
+    e.preventDefault(); // Prevent default form submit
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(() => {
+        formMessage.style.color = 'green';
+        formMessage.innerText = 'Message sent successfully!';
+        contactForm.reset();
+    }, (error) => {
+        formMessage.style.color = 'red';
+        formMessage.innerText = 'Oops! Something went wrong. Try again.';
+        console.error('EmailJS Error:', error);
+    });
 });
 </script>
 
