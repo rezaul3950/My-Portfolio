@@ -1183,18 +1183,7 @@ textarea:focus {
 /* ==================== MAIN SECTIONS ==================== */
 
 /* Header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 100px;
-  z-index: 1000;
-  transition: 0.5s;
-}
+
 
 .header .logo {
   font-size: 2rem;
