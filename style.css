@@ -1217,6 +1217,9 @@ body.light-mode .navbar a {
 body.light-mode .navbar a.active {
   color: #0077ff;
 }
+body.light-mode .navbar {
+  background: #fff;
+}
 
 /* Home Section */
 body.light-mode .home {
